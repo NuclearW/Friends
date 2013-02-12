@@ -4,3 +4,24 @@ version: ${project.version}
 author: NuclearW
 description: Friends lets you mark others as your friends
 database: true
+commands:
+    friends:
+        description: Friends root command
+        usage: |
+            /<command>
+permissions:
+    friends.*:
+        description: Gives access to all Friends commands
+        children:
+            friends.add: true
+            friends.remove: true
+            friends.list: true
+    friends.add:
+        description: Allows you to do a lookup
+        default: true
+    friends.remove:
+        description: Allows you to charge a player
+        default: true
+    friends.list:
+        description: Allows you to convict a player
+        default: true

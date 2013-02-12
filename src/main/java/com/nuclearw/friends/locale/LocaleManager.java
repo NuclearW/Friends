@@ -52,10 +52,10 @@ public class LocaleManager {
 	}
 
 	public String getString(String key) {
-		return getString(key, null);
+		return getString(key, (Object) null);
 	}
 
-	public String getString(String key, Object[] messageArguments) {
+	public String getString(String key, Object ... messageArguments) {
 		String output = bundle.getString(key);
 
 		if (messageArguments != null) {

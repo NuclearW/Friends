@@ -1,0 +1,9 @@
+# DO NOT SET REBUILD TO TRUE UNLESS YOU INTEND TO DISCARD ALL DATA
+database:
+    username: bukkit
+    isolation: SERIALIZABLE
+    driver: org.sqlite.JDBC
+    password: walrus
+    url: jdbc:sqlite:{DIR}{NAME}.db
+    logging: true
+    rebuild: false
