@@ -28,10 +28,20 @@ public class PlayerListener implements Listener {
 			StringBuilder builder = new StringBuilder();
 			builder.append(plugin.getLocale().getString("friends-online"));
 
+			Iterator<String> iterator = friends.iterator();
+
+			while(iterator.hasNext()) {
+				String friend = iterator.next();
+				if(plugin.getServer().getPlayer(friend) == null) {
+					iterator.remove();
+				}
+			}
+
+			iterator = friends.iterator();
+
 			if(friends.isEmpty()) {
 				builder.append(plugin.getLocale().getString("no-friends-online"));
 			} else {
-				Iterator<String> iterator = friends.iterator();
 				while(iterator.hasNext()) {
 					String friend = iterator.next();
 

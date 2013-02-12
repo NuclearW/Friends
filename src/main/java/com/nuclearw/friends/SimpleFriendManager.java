@@ -1,6 +1,5 @@
 package com.nuclearw.friends;
 
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +19,7 @@ public class SimpleFriendManager implements FriendManager {
 		for(Friend f : friends) {
 			names.add(f.getOwner());
 		}
-		return Collections.unmodifiableSet(names);
+		return names;
 	}
 
 	@Override
@@ -30,7 +29,7 @@ public class SimpleFriendManager implements FriendManager {
 		for(Friend friend : friends) {
 			names.add(friend.getFriend());
 		}
-		return Collections.unmodifiableSet(names);
+		return names;
 	}
 
 	@Override
