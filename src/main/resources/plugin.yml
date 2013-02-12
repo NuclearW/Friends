@@ -16,6 +16,9 @@ permissions:
             friends.add: true
             friends.remove: true
             friends.list: true
+            friends.loginlist: true
+            friends.joinmessage: true
+            friends.partmessage: true
     friends.add:
         description: Allows you to do a lookup
         default: true
@@ -24,4 +27,13 @@ permissions:
         default: true
     friends.list:
         description: Allows you to convict a player
+        default: true
+    friends.loginlist:
+        description: Allows you to see a list of your online friends when you login
+        default: true
+    friends.joinmessage:
+        description: Allows you to recieve login messages about friends
+        default: true
+    friends.partmessage:
+        description: Allows you to recieve logout messages about friends
         default: true

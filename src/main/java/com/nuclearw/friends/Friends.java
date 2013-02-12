@@ -11,6 +11,7 @@ import com.avaje.ebean.EbeanServer;
 import com.lennardf1989.bukkitex.MyDatabase;
 import com.nuclearw.friends.api.FriendManager;
 import com.nuclearw.friends.commands.BaseCommandExecutor;
+import com.nuclearw.friends.listeners.PlayerListener;
 import com.nuclearw.friends.locale.LocaleManager;
 
 public class Friends extends JavaPlugin {
@@ -37,6 +38,8 @@ public class Friends extends JavaPlugin {
 		manager = new SimpleFriendManager(this);
 
 		getCommand("friends").setExecutor(new BaseCommandExecutor(this));
+
+		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 
 		metrics();
 

@@ -14,6 +14,16 @@ public class SimpleFriendManager implements FriendManager {
 	}
 
 	@Override
+	public Set<String> getOwners(String friend) {
+		Set<Friend> friends = plugin.getDatabase().find(Friend.class).where().ieq("friend", friend).findSet();
+		Set<String> names = new HashSet<String>();
+		for(Friend f : friends) {
+			names.add(f.getOwner());
+		}
+		return Collections.unmodifiableSet(names);
+	}
+
+	@Override
 	public Set<String> getFriends(String owner) {
 		Set<Friend> friends = plugin.getDatabase().find(Friend.class).where().ieq("owner", owner).findSet();
 		Set<String> names = new HashSet<String>();
