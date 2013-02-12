@@ -5,5 +5,5 @@ database:
     driver: org.sqlite.JDBC
     password: walrus
     url: jdbc:sqlite:{DIR}{NAME}.db
-    logging: true
+    logging: false
     rebuild: false
