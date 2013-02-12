@@ -15,7 +15,7 @@ public class Friend {
 	private int id;
 
 	@NotEmpty
-	@Column(name="owner")
+	@Column(name="owner", unique=true)
 	private String owner;
 
 	@NotEmpty
