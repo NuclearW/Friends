@@ -1,0 +1,7 @@
+== Friends
+
+Friends lets you mark others as your friends
+
+=== Compiling
+
+Maven 3 is required to compile Friends

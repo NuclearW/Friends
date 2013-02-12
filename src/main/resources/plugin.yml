@@ -1,0 +1,6 @@
+name: Friends
+main: com.nuclearw.friends.Friends
+version: ${project.version}
+author: NuclearW
+description: Friends lets you mark others as your friends
+database: true
