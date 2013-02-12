@@ -13,13 +13,13 @@ public class RemoveCommandExecutor extends FriendsCommand implements CommandExec
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if(args.length != 2) {
+		if(args.length != 3) {
 			printArgsError(args);
 			printHelp(sender, label);
 			return true;
 		}
 
-		String target = findTarget(args[1]);
+		String target = findTarget(args[2]);
 
 		if(!plugin.getManager().isFriend(sender.getName(), target)) {
 			sender.sendMessage(plugin.getLocale().getString("not-friends", target));
