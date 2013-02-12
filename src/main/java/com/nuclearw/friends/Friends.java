@@ -20,6 +20,8 @@ public class Friends extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		Config.load(this);
+
 		initDatabase();
 
 		try {
