@@ -13,13 +13,13 @@ public class AddCommandExecutor extends FriendsCommand implements CommandExecuto
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if(args.length != 3) {
+		if(args.length != 2) {
 			printArgsError(args);
 			printHelp(sender, label);
 			return true;
 		}
 
-		String target = findTarget(args[2]);
+		String target = findTarget(args[1]);
 
 		if(plugin.getManager().isFriend(sender.getName(), target)) {
 			sender.sendMessage(plugin.getLocale().getString("already-friends", target));

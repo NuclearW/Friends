@@ -25,7 +25,7 @@ public class SimpleFriendManager implements FriendManager {
 
 	@Override
 	public boolean isFriend(String owner, String other) {
-		return plugin.getDatabase().find(Friend.class).where().ieq("owner", owner).ieq("friend", other).findSet().isEmpty();
+		return !plugin.getDatabase().find(Friend.class).where().ieq("owner", owner).ieq("friend", other).findSet().isEmpty();
 	}
 
 	@Override
