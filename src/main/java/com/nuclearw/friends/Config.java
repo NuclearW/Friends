@@ -17,10 +17,10 @@ public class Config {
 		dbURL = plugin.getConfig().getString("database.url");
 		dbUsername = plugin.getConfig().getString("database.username");
 		dbPassword = plugin.getConfig().getString("database.password");
-		dbIsolation = plugin.getConfig().getString("database.getisolation");
+		dbIsolation = plugin.getConfig().getString("database.isolation");
 
 		dbLogging = plugin.getConfig().getBoolean("database.logging");
-		dbLogging = plugin.getConfig().getBoolean("database.rebuild");
+		dbRebuild = plugin.getConfig().getBoolean("database.rebuild");
 	}
 }
 
